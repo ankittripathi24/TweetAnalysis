@@ -33,6 +33,11 @@ Instructions on how to use the project, for example:
 
 3. Unpause the DAG in the Airflow web interface.
 
+4. Start the Streamlit app:
+    ```
+    streamlit run your_streamlit_app.py
+    ```
+
 ## DAG
 
 A brief description of the DAG and its tasks:
@@ -43,9 +48,20 @@ A brief description of the DAG and its tasks:
 
 3. `save_model`: This task pulls the model from XCom and saves it to a .pkl file in a specific folder.
 
+
+## Streamlit App
+
+The Streamlit app provides an interactive interface for analyzing tweet data. It offers the following options:
+
+1. **Enter Tweet:** Manually enter a tweet for analysis.
+2. **Upload Tweet CSV:** Upload a CSV file of tweets for analysis.
+3. **Get Tweets from Scrapper:** Get tweets from a web scrapper for analysis.
+
+In addition to these options, the app also displays stats of the uploaded data. The data for the Streamlit app gets refreshed by the Airflow DAG as per the schedule.
+
+
 ## Contributing
 
-Information about how to contribute to the project.
 
 ## License
 
